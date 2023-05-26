@@ -1,9 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
-// import RegisterPage from '../src/components/RegisterPage';
-import {Link, BrowserRouter} from 'react-router-dom';
+import React from 'react';
+import {Link} from 'react-router-dom';
 
-function App() {
+function RegisterPage() {
   return (
     <div className='auth-Wrapper'>
         <div style={{textAlign:"center"}}>
@@ -39,12 +37,12 @@ function App() {
         {/* {errors.exampleRequired && <p>This field is required</p>} */}
         <input type="submit" />
         </form>
+
         <BrowserRouter>
           <Link style={{color:"gray", textDecoration:"none"}} to="login">이미 아이디가 있다면...</Link>
         </BrowserRouter>
-        
     </div>
-  );
+  )
 }
 
-export default App;
+export default RegisterPage;
