@@ -9,7 +9,7 @@ function RegisterPage() {
     const password = useRef();
     password.current = watch("password");
 
-    console.log(watch("email"));
+    console.log('password.current', password.current);
 
     return (
         <div className='auth-Wrapper'>
@@ -47,7 +47,7 @@ function RegisterPage() {
             <input
                 name="password_confirm"
                 type="password"
-                {...register("password", {
+                {...register("password_confirm", {
                   required:true, 
                   validate: (value) =>
                     value === password.current
