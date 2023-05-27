@@ -71,13 +71,14 @@ function RegisterPage() {
                 {errors.password_confirm && errors.password_confirm.type === "required" && <p>This password confirm field is required</p>}
                 {errors.password_confirm && errors.password_confirm.type === "validate" && <p>The password do not match</p>}
         
-                    {errorFromSubmit && <p>{errorFromSubmit}</p>}
+                {errorFromSubmit && <p>{errorFromSubmit}</p>}
 
                 <input type="submit" />
+                <BrowserRouter>
+                    <Link style={{color:"gray", textDecoration:"none"}} to="login">이미 아이디가 있다면...</Link>
+                </BrowserRouter>
             </form>
-            <BrowserRouter>
-              <Link style={{color:"gray", textDecoration:"none"}} to="login">이미 아이디가 있다면...</Link>
-            </BrowserRouter>
+            
             
         </div>
     );
