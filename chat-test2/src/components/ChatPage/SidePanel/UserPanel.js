@@ -7,6 +7,7 @@ import { getAuth, signOut } from "firebase/auth";
 
 function UserPanel() {
     const user = useSelector(state => state.user.currentUser)
+    console.log("selector",user);
 
     const handleLogout = () => {
         const auth = getAuth();

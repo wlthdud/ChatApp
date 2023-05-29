@@ -8,7 +8,7 @@ import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase
 function RegisterPage() {
 
     const { register, watch, formState: { errors }, handleSubmit } = useForm();
-    const [errorFromSubmit, setErrorFromSubmit] = useState("")
+    const [errorFromSubmit, setErrorFromSubmit] = useState(""); //error 처리
     const [loading, setLoading] = useState(false);
 
     const password = useRef();
@@ -17,7 +17,7 @@ function RegisterPage() {
     const onSubmit = async (data) => {
 
         try {
-            setLoading(true)
+            setLoading(true);
 
             const auth = getAuth();
             let createdUser = await createUserWithEmailAndPassword(auth, data.email, data.password)
@@ -33,7 +33,7 @@ function RegisterPage() {
                 image: createdUser.user.photoURL
             })
 
-            setLoading(false)
+            setLoading(false);
         } catch (error) {
             setErrorFromSubmit(error.message)
             setLoading(false)

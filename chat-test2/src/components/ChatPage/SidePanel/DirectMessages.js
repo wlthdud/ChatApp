@@ -78,6 +78,7 @@ export class DirectMessages extends Component {
 
     render() {
         const { users } = this.state;
+        console.log(users);
         return (
             <div>
                 <span style={{ display: 'flex', alignItems: 'center' }}>
